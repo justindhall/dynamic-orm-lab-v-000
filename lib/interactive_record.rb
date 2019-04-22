@@ -7,7 +7,6 @@ class InteractiveRecord
   end
 
   def self.column_names
-
     sql = <<-SQL
       PRAGMA table_info('#{table_name}')
     SQL
@@ -18,7 +17,6 @@ class InteractiveRecord
     table_info.each do |column|
       column_names << column["name"]
     end
-
     column_names.compact
   end
 
